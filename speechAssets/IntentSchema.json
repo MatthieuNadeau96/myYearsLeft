@@ -1,0 +1,246 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "DaysLeftIntent",
+      "samples": [
+        "Yes",
+        "Yeah",
+        "Yup",
+        "Sure",
+        "No",
+        "Nope",
+        "No thanks",
+        "No way"
+      ],
+      "slots": [
+        {
+          "name": "dateOfBirth",
+          "type": "AMAZON.DATE",
+          "samples": [
+            "{dateOfBirth}"
+          ]
+        },
+        {
+          "name": "weight",
+          "type": "AMAZON.NUMBER",
+          "samples": [
+            "{weight}",
+            "{weight} pounds",
+            "I weigh {weight} ",
+            "I weigh {weight} pounds"
+          ]
+        },
+        {
+          "name": "exercise",
+          "type": "AMAZON.NUMBER",
+          "samples": [
+            "{exercise}",
+            "I exercise {exercise} hours a week",
+            "{exercise} hours",
+            "About {exercise}"
+          ]
+        },
+        {
+          "name": "drivingAccident",
+          "type": "AMAZON.NUMBER",
+          "samples": [
+            "{drivingAccident}",
+            "I've been in {drivingAccident} accidents",
+            "about {drivingAccident} ",
+            "about {drivingAccident} accidents",
+            "I've been in about {drivingAccident} accidents",
+            "I've been in about {drivingAccident} ",
+            "none",
+            "I've never been in an accident",
+            "I've never been in a car accident"
+          ]
+        },
+        {
+          "name": "drivingDUI",
+          "type": "AMAZON.NUMBER",
+          "samples": [
+            "About {drivingDUI}",
+            "None",
+            "I never drive under the influence",
+            "{drivingDUI}"
+          ]
+        },
+        {
+          "name": "smoke",
+          "type": "AMAZON.NUMBER",
+          "samples": [
+            "{smoke}",
+            "none",
+            "I don't smoke"
+          ]
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-DaysLeftIntent.IntentSlot-dateOfBirth",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "When is your birthday?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-DaysLeftIntent.IntentSlot-weight",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How much do you weigh?"
+        },
+        {
+          "type": "PlainText",
+          "value": "How many pounds do you weigh?"
+        },
+        {
+          "type": "PlainText",
+          "value": "Tell me your weight"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-DaysLeftIntent.IntentSlot-exercise",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How many hours do you exercise per week?"
+        },
+        {
+          "type": "PlainText",
+          "value": "About how many hours a week do you exercise?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-DaysLeftIntent.IntentSlot-drivingAccident",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How many car accidents have you been in in the past three years?"
+        },
+        {
+          "type": "PlainText",
+          "value": "In the past three years, how many car accidents have you been in?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-DaysLeftIntent.IntentSlot-drivingDUI",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How many DUI's have you had?"
+        },
+        {
+          "type": "PlainText",
+          "value": "How many times have you been driving under the influence?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-DaysLeftIntent.IntentSlot-smoke",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How many packs of cigarettes do you smoke per week?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "DaysLeftIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "dateOfBirth",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-DaysLeftIntent.IntentSlot-dateOfBirth"
+            }
+          },
+          {
+            "name": "weight",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-DaysLeftIntent.IntentSlot-weight"
+            }
+          },
+          {
+            "name": "exercise",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-DaysLeftIntent.IntentSlot-exercise"
+            }
+          },
+          {
+            "name": "drivingAccident",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-DaysLeftIntent.IntentSlot-drivingAccident"
+            }
+          },
+          {
+            "name": "drivingDUI",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-DaysLeftIntent.IntentSlot-drivingDUI"
+            }
+          },
+          {
+            "name": "smoke",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-DaysLeftIntent.IntentSlot-smoke"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

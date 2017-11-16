@@ -1,0 +1,22 @@
+{
+  "name": "--yes",
+  "version": "1.0.0",
+  "description": "\"This is an Alexa Skill that calculates the user's life expectancy based off of the questions the user answers.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthieuNadeau96/DaysLeft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthieuNadeau96/DaysLeft/issues"
+  },
+  "homepage": "https://github.com/MatthieuNadeau96/DaysLeft#readme",
+  "dependencies": {
+    "universal-analytics": "^0.4.13"
+  }
+}
