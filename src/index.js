@@ -30,8 +30,8 @@ const myYearsLeftIntro = [
 var cardTitle = '';
 var cardContent = '';
 var imageObj = {
-    smallImageUrl: 'https://s3.amazonaws.com/mydaysleftlogo/yearsLeft(108x108)fixedshadow2.png',
-    largeImageUrl: 'https://s3.amazonaws.com/mydaysleftlogo/yearsLeft(512x512)fixedshadow2.png'
+    smallImageUrl: 'https://s3.amazonaws.com/mydaysleftlogo/yearsLeft(108x108)skyblue.png',
+    largeImageUrl: 'https://s3.amazonaws.com/mydaysleftlogo/yearsLeft(512x512)skyblue.png'
 };
 
 const handlers = {
