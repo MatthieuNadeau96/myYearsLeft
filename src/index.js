@@ -69,7 +69,7 @@ const handlers = {
 
         obj.response.cardRenderer(cardTitle, cardContent, imageObj);
         obj.response.speak("Welcome back, you have " + obj.attributes['averageYearsLeft'] + ' years left to live. <break time=".5s"/> which equals to ' + obj.attributes['daysLeft'] + " days left." +
-          " Here is a tip, to help you live a longer and healthier life. " + data['tip'] + '<break time="1s"/> I added this tip, and more information, on your Alexa skill.' + "Please don't be afraid to come back for more tips. Thank you!");
+          " Here is a tip, to help you live a longer and healthier life. " + data['tip'] + '<break time="1s"/> I added this tip, and more information, on your Alexa skill.<break time=".6s"/>' + " Please don't be afraid to come back for more tips." +  '<break time=".6s"/>Thank you!');
         obj.emit(':responseReady');
 
 
