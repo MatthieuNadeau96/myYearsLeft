@@ -94,7 +94,7 @@ const handlers = {
       this.emit(':responseReady');
     };
   },
-  'DaysLeftIntent': function() {
+  'LifeLeftIntent': function() {
 
 
     var filledSlots = delegateSlotCollection.call(this);
@@ -158,7 +158,9 @@ const handlers = {
         yearsLeft += 2;
       } else if(parseInt(smoke) >= 2) {
         yearsLeft -= 8;
-      };
+      } else {
+        yearsLeft += 1;
+      }
 
                           //accident condition
       if(parseInt(drivingAccident) >= 4) {
